@@ -1,0 +1,100 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Ingush folklor project API",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/": {},
+        "/api/science-articles": {
+            "get": {
+                "tags": [
+                    "Научные статьи"
+                ],
+                "summary": "Получение списка научных статей",
+                "operationId": "80cb604eabebcf5d3d266a8712116198",
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "title": {
+                                                        "type": "string",
+                                                        "example": "Заголовок рассказа"
+                                                    },
+                                                    "text": {
+                                                        "type": "text",
+                                                        "example": "Текст рассказа"
+                                                    },
+                                                    "image": {
+                                                        "type": "string",
+                                                        "example": "Текст научной статьи"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/tales": {
+            "get": {
+                "tags": [
+                    "Рассказы и сказки"
+                ],
+                "summary": "Получение списка рассказов",
+                "operationId": "5fe5afbf8a2ae2b7c6c8e8a7bf78a7ec",
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "title": {
+                                                        "type": "string",
+                                                        "example": "Заголовок рассказа"
+                                                    },
+                                                    "text": {
+                                                        "type": "text",
+                                                        "example": "Текст рассказа"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
